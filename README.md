@@ -1,6 +1,6 @@
 # facile-challenge
 
-# REST API
+# API REST usando POSTGRESQL e EXPRESS
 
 Este é um desafio de construção de uma API REST.
 
@@ -14,6 +14,8 @@ Este é um desafio de construção de uma API REST.
     executar o arquivo `server/infra/create.sql` num servidor PostgreSQL 
     ou
     copiar o código do arquivo `server/infra/create.sql` num servidor PostgreSQL
+    
+    Mudar os dados de acesso a base de dados no arquivo .env, tais como: USERNAME, HOST, PASSWORD e PORT
     
 ## Executar a app
     npm dev or yarn dev
@@ -57,6 +59,10 @@ A REST API deste aplicativo é descrita abaixo.
 `POST /encripts/`
 
     'Accept: application/json' http://localhost:7000/thing
+    
+    {
+	"name":"shazam"
+    }
 
 ### Response
 
@@ -68,6 +74,8 @@ A REST API deste aplicativo é descrita abaixo.
     Connection: keep-alive
 
     {
-	"name":"shazam"
+	"id": 19,
+	"encripted_name": "05f53a6ded9d"
     }
+   
 
