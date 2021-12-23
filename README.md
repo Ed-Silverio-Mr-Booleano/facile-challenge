@@ -2,29 +2,27 @@
 
 # REST API
 
-Este é um desafio de construção de uma API REST
+Este é um desafio de construção de uma API REST.
 
-The entire application is contained within the `app.rb` file.
 
-`config.ru` is a minimal Rack configuration for unicorn.
-
-`run-tests.sh` runs a simplistic test and generates the API
-documentation below.
-
-It uses `run-curl-tests.rb` which runs each command defined in
-`commands.yml`.
-
-## Install
+## Instalar a app
 
     npm install or yarn
-
-## Run the app
+    
+## Configurar a base de dados
+    
+    executar o arquivo `server/infra/create.sql` num servidor PostgreSQL 
+    ou
+    copiar o código do arquivo `server/infra/create.sql` num servidor PostgreSQL
+    
+## Executar a app
     npm dev or yarn dev
     
 
 ## Build app
 
     yarn buid or npm build
+    yarn start
 
 # REST API
 
@@ -52,7 +50,7 @@ A REST API deste aplicativo é descrita abaixo.
       "encripted_name": "05f53a6ded9d"
     }
 
-## Create a new Thing
+## Criar um novo registro
 
 ### Request
 
@@ -70,6 +68,6 @@ A REST API deste aplicativo é descrita abaixo.
     Connection: keep-alive
 
     {
-	    "name":"shazam"
+	"name":"shazam"
     }
 
