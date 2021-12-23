@@ -1,11 +1,10 @@
 import database from '../infra/database';
 
-function indexEncrypts(){
+function indexEncrypt(){
     const obj = {
-        id: 1,
-        name: 2
+        id: 1
     };
-    return database.query('SELECT $1:name FROM $2:name', [obj, 'encripts']);
+    return database.query('SELECT Max($1:name) as id FROM $2:name', [obj, 'encripts']);
 }
 
 function showEncrypt(id){
@@ -19,4 +18,4 @@ function storeEncrypt(name){
     return database.query('INSERT INTO encripts (${this:name}) VALUES (${this:csv})', obj)
 }
 
-module.exports = {indexEncrypts, showEncrypt, storeEncrypt};
+module.exports = {indexEncrypt, showEncrypt, storeEncrypt};
